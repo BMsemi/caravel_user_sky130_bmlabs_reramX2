@@ -1,0 +1,49 @@
+{
+    "TOP_SOURCE": "user_project_wrapper",
+    "TOP_LAYOUT": "$TOP_SOURCE",
+
+    "EXTRACT_FLATGLOB": [ "" ],
+
+    "EXTRACT_ABSTRACT": [
+        "*__fill_*",
+        "*__fakediode_*",
+        "*__tapvpwrvgnd_*",
+        "sky130_bmlabs_reram__nvm32x32"
+    ],
+
+    "SOFT_MACROS": [
+        "sky130_bmlabs_reram__nvm32x32"
+    ],
+    "SOFT_IGNORE": [
+        "sky130_bmlabs_reram__nvm32x32"
+    ],
+    "BLACKBOX": [
+        "sky130_bmlabs_reram__nvm32x32"
+    ],
+
+    "PIN_ORDER": [
+        "sky130_bmlabs_reram__nvm32x32 VDDC1 VDDC2 VDDA1 VDDA2 VSS user_clk user_rst wb_clk_i wb_rst_i",
+        "sky130_bmlabs_reram__nvm32x32 wbs_stb_i wbs_cyc_i wbs_we_i wbs_sel_i[3] wbs_sel_i[2] wbs_sel_i[1] wbs_sel_i[0]",
+        "sky130_bmlabs_reram__nvm32x32 wbs_dat_i[31:0] wbs_adr_i[31:0] wbs_dat_o[31:0] wbs_ack_o",
+        "sky130_bmlabs_reram__nvm32x32 ScanInCC ScanInDL ScanInDR TM ScanOutCC",
+        "sky130_bmlabs_reram__nvm32x32 Iref Vcc_read Vcomp Bias_comp2",
+        "sky130_bmlabs_reram__nvm32x32 Vcc_wl_read Vcc_wl_set Vbias Vcc_wl_reset",
+        "sky130_bmlabs_reram__nvm32x32 Vcc_set dc_bias"
+    ],
+
+    "LVS_FLATTEN": [ "" ],
+    "LVS_NOFLATTEN": [ "" ],
+    "LVS_IGNORE": [ "" ],
+
+    "LVS_SPICE_FILES": [
+        "$PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice",
+        "$PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice"
+    ],
+
+    "LVS_VERILOG_FILES": [
+        "$UPRJ_ROOT/verilog/gl/$TOP_SOURCE.v"
+    ],
+
+    "LAYOUT_FILE": "$UPRJ_ROOT/gds/$TOP_LAYOUT.gds"
+}
+

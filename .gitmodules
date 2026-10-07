@@ -1,0 +1,3 @@
+[submodule "sky130_bmlabs_reram"]
+	path = ip/sky130_bmlabs_reram
+	url = https://github.com/Baavanes/sky130_bmlabs_reram.git
