@@ -24,12 +24,12 @@ the IP submodule commit is advanced.
 1. **Clone the Repository:**
 
 ```
-git clone --recurse-submodules https://github.com/Baavanes/caravel_user_sky130_bmlabs_reram.git
+git clone --recurse-submodules https://github.com/BMsemi/caravel_user_sky130_bmlabs_reramX2.git
 ```
 2. **Prepare Your Environment:**
 
 ```
-cd caravel_user_sky130_bmlabs_reram
+cd caravel_user_sky130_bmlabs_reramX2
 make setup
 ```
 3. **Initialize or update the IP submodule:**
