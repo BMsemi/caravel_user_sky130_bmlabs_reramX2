@@ -10,7 +10,7 @@
 
 This repository contains the Caravel project integration for the BM Labs 32 x 32
 ReRAM macro. The reusable IP is maintained independently in the
-[`sky130_bmlabs_reram`](https://github.com/Baavanes/sky130_bmlabs_reram)
+[`sky130_bmlabs_reram`](https://github.com/BMsemi/sky130_bmlabs_reram)
 repository and pinned here as a Git submodule.
 
 The checked-in implementation and signoff artifacts record the previous
@@ -43,15 +43,15 @@ git submodule update --init --recursive
 make user_project_wrapper
 ```
 
-5. **If wider analog routing is required, follow the NDR instructions:**
+5. **If wider analog routing is required, use the checked-in LibreLane NDR configuration:**
 
-   See `Widen_Analog_Routig_using_NDR.txt`.
+   See `docs/NDR_CONFIGURATION.md`. No LibreLane installation files are patched.
 
 The project pins a specific IP commit. Update the IP independently and then
-advance the submodule pointer in a separate project commit:
+advance the submodule pointer and dependency manifest in a separate project commit:
 
 ```sh
 git -C ip/sky130_bmlabs_reram fetch
 git -C ip/sky130_bmlabs_reram checkout <tested-ip-commit>
-git add ip/sky130_bmlabs_reram
+git add ip/sky130_bmlabs_reram ip/dependencies.json
 ```

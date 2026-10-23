@@ -58,7 +58,7 @@ module user_project_wrapper #(
     // -----------------------------
     // Instantiate your hard macro
     // -----------------------------
-   sky130_bmlabs_reram__nvm32x32 neuro_inst (
+   sky130_bmlabs_reram__cim32x32 neuro_inst (
 `ifdef USE_POWER_PINS
   .VDDC1 (vccd1),
   .VDDC2 (vccd2),
