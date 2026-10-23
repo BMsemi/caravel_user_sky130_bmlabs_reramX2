@@ -6,7 +6,7 @@
     ],
     "MAGIC_EXT_USE_GDS": true,
     "MAGIC_EXT_ABSTRACT_CELLS": [
-        "sky130_bmlabs_reram__nvm32x32"
+        "sky130_bmlabs_reram__cim32x32"
     ],
     "PNR_SDC_FILE": "dir::signoff.sdc",
     "SYNTH_ELABORATE_ONLY": false,
@@ -35,15 +35,15 @@
     "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
     "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
     "MACROS": {
-        "sky130_bmlabs_reram__nvm32x32": {
+        "sky130_bmlabs_reram__cim32x32": {
             "vh": [
-                "dir::../../ip/sky130_bmlabs_reram/verilog/sky130_bmlabs_reram__nvm32x32.v"
+                "dir::../../ip/sky130_bmlabs_reram/verilog/sky130_bmlabs_reram__cim32x32.v"
             ],
             "gds": [
-                "dir::../../ip/sky130_bmlabs_reram/gds/sky130_bmlabs_reram__nvm32x32.gds"
+                "dir::../../ip/sky130_bmlabs_reram/gds/sky130_bmlabs_reram__cim32x32.gds"
             ],
             "lef": [
-                "dir::../../ip/sky130_bmlabs_reram/lef/sky130_bmlabs_reram__nvm32x32.lef"
+                "dir::../../ip/sky130_bmlabs_reram/lef/sky130_bmlabs_reram__cim32x32.lef"
             ],
             "instances": {
                 "neuro_inst": {
@@ -55,7 +55,7 @@
                 }
             },
             "lib": {
-                "*": "dir::../../ip/sky130_bmlabs_reram/lib/sky130_bmlabs_reram__nvm32x32.lib"
+                "*": "dir::../../ip/sky130_bmlabs_reram/lib/sky130_bmlabs_reram__cim32x32.lib"
             }
         }
     },
@@ -115,5 +115,102 @@
     "MAGIC_ZEROIZE_ORIGIN": false,
     "meta": {
         "version": 2
+    },
+    "NON_DEFAULT_RULES": {
+        "NDR_ANALOG_SUPPLY": {
+            "width": [
+                "li1",
+                "0.17",
+                "met1",
+                "3.0",
+                "met2",
+                "3.0",
+                "met3",
+                "3.0",
+                "met4",
+                "3.6",
+                "met5",
+                "3.6"
+            ],
+            "spacing": [
+                "li1",
+                "0.17",
+                "met1",
+                "1.5",
+                "met2",
+                "1.5",
+                "met3",
+                "1.5",
+                "met4",
+                "1.8",
+                "met5",
+                "1.8"
+            ]
+        },
+        "NDR_ANALOG_BIAS_SAFE": {
+            "width": [
+                "li1",
+                "0.17",
+                "met1",
+                "3.0",
+                "met2",
+                "3.0",
+                "met3",
+                "3.0",
+                "met4",
+                "3.0",
+                "met5",
+                "3.0"
+            ],
+            "spacing": [
+                "li1",
+                "0.17",
+                "met1",
+                "1.5",
+                "met2",
+                "1.5",
+                "met3",
+                "1.5",
+                "met4",
+                "1.5",
+                "met5",
+                "1.5"
+            ]
+        },
+        "NDR_ANALOG_DC_BIAS_EXTRA_SAFE": {
+            "width": [
+                "li1",
+                "0.17",
+                "met1",
+                "3.0",
+                "met2",
+                "3.0",
+                "met3",
+                "3.0",
+                "met4",
+                "3.0",
+                "met5",
+                "3.0"
+            ],
+            "spacing": [
+                "li1",
+                "0.17",
+                "met1",
+                "0.14",
+                "met2",
+                "0.8",
+                "met3",
+                "0.8",
+                "met4",
+                "0.6",
+                "met5",
+                "1.5"
+            ]
+        }
+    },
+    "DRT_ASSIGN_NDR": {
+        "^analog_io\\[(19|20|21|22|23|25|26|27)\\]$": "NDR_ANALOG_SUPPLY",
+        "^analog_io\\[24\\]$": "NDR_ANALOG_BIAS_SAFE",
+        "^analog_io\\[18\\]$": "NDR_ANALOG_DC_BIAS_EXTRA_SAFE"
     }
 }
